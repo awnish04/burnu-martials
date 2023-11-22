@@ -1,5 +1,4 @@
 const express = require("express");
-// const mysql = require("mysql");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const EmployeeModel = require("./models/Employee");
@@ -34,75 +33,9 @@ app.post("/login", (req, res) => {
   
 
 });
+// app.use("/",(req,res)=>{
+//   res.send("Server is running")
+// })
 app.listen(3001, () => {
-  console.log("server running");
+  console.log("Server is running");
 });
-// const { email, password } = req.body;
-  // EmployeeModel.findOne({ email: email, password: password })
-  //   .then((user) => {
-  //     if (user) {
-  //       res.json("Login Successful.");
-  //     } else {
-  //       res.status(401).json("Email or password is incorrect.");
-  //     }
-  //   })
-  //   .catch((err) => {
-  //     console.error(err);
-  //     res.status(500).json("Internal Server Error");
-  //   });
-
-
-
-
-
-
-
-
-
-
-  
-// const db = mysql.createConnection({
-//   host: "localhost",
-//   user: 'root',
-//   password: '',
-//   database: 'register',
-// });
-
-// // For Register
-// app.post("/register", (req, res) => {
-//   const sql = "INSERT INTO login (`name`, `email`, `password`) VALUES (?)";
-//   const values = [req.body.name, req.body.email, req.body.password];
-//   db.query(sql, [values], (err, data) => {
-//     if (err) {
-//       return res.json(err);
-//     }
-//     return res.json(data);
-//   });
-// });
-// // For login
-// app.post("/login", (req, res) => {
-//   const sql = "SELECT * FROM login WHERE `email` = ? AND `password` = ? ";
-
-//   db.query(sql, [req.body.email, req.body.password], (err, data) => {
-//     if (err) {
-//       return res.json("Error");
-//     }
-//     if (data.length > 0) {
-//       return res.json("Success");
-//     } else {
-//       return req.json("Failed");
-//     }
-//   });
-// });
-
-// app.get("/", (re, res) => {
-//   return res.json("From Backend Side");
-// });
-
-// app.get("/", (re, res) => {
-//   return res.json("From Backend Side");
-// });
-
-// app.listen(8081, () => {
-//   console.log("server running");
-// });
