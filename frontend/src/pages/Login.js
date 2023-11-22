@@ -8,9 +8,9 @@ function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [errors, setErrors] = useState({});
-  const togglePasswordVisibility = () => {
-    setPassword(!password);
-  };
+  // const togglePasswordVisibility = () => {
+  //   setPassword(!password);
+  // };
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -28,12 +28,17 @@ function Login() {
           email,
           password,
         })
+        // .then((result) => {
+        //   console.log(result);
+        //   if (result.data === "Login Successful") {
+        //     navigate("/about");
+        //     alert("Login Successful"); // Update the message to "Login Successful"
+        //   }
+        // })
         .then((result) => {
           console.log(result);
-          if (result.data === "Login Successful") {
-            navigate("/about");
-            alert("Login Successful"); // Update the message to "Login Successful"
-          }
+          alert("Login Successful");
+          navigate("/");
         })
         .catch((err) => console.log(err));
     }
@@ -89,14 +94,14 @@ function Login() {
                   {errors.password && (
                     <span className="text-red-600"> {errors.password} </span>
                   )}
-                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                  {/* <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                     <span
                       onClick={togglePasswordVisibility}
                       className="h-6 text-gray-700 cursor-pointer"
                     >
                       {password ? "🙈" : "👁️"}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="text-right text-gray-400 hover:underline hover:text-gray-100">
                   <Link to="#">Forgot your password?</Link>

@@ -9,9 +9,9 @@ function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const togglePasswordVisibility = () => {
-    setPassword(!password);
-  };
+  // const togglePasswordVisibility = () => {
+  //   setPassword(!password);
+  // };
   const navigate = useNavigate();
   const [errors, setErrors] = useState({}); // State to manage validation errors
   const handleSubmit = (e) => {
@@ -31,7 +31,7 @@ function Register() {
         })
         .then((result) => {
           console.log(result);
-          alert("Registration Successful");
+           alert("Registration Successful");
           navigate("/login");
         })
         .catch((err) => console.log(err));
@@ -106,14 +106,14 @@ function Register() {
                         {errors.password && (
                         <span className="text-red-600">{errors.password}</span>
                       )}
-                        <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                        {/* <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                           <span
                             onClick={togglePasswordVisibility}
                             className="h-6 text-gray-700 cursor-pointer"
                           >
                             {password ? "🙈" : "👁️"}
                           </span>
-                        </div>
+                        </div> */}
                       </div>
 
                     <div className="py-2">
