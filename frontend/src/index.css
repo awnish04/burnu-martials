@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-primary font-secondary bg-white;
+  }
+  .logo{
+    @apply text-lg lg:text-2xl text-white transition font-primary font-normal capitalize leading-tight tracking-wider ; 
+  } 
+
+  .h1 {
+    @apply text-5xl lg:text-8xl font-primary text-[#ff3131] font-normal capitalize leading-tight tracking-widest mb-2;
+  }
+  .section {
+    @apply h-full w-full;
+  }
+  .btn {
+    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-gray-800 text-white;
+  }
+  .loginbtn {
+    @apply py-2 px-4  flex items-center justify-center text-base capitalize rounded-md font-secondary font-semibold bg-gray-800 text-white;
+  }
+  .item {
+    position: relative;
+    overflow: hidden;
+  }
+  h5 {
+    position: absolute;
+    bottom: 1rem;
+    width: 13rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition-duration: 200ms;
+  }
+
+  .group:hover h5 {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-text-opacity: 1;
+    /* color: rgb(0 0 0 / var(--tw-text-opacity)); */
+  }
+  .item-gradient {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+    --tw-gradient-from: transparent;
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--tw-gradient-to, rgb(0 0 0 / 0));
+    --tw-gradient-to: #111827;
+  }
+
+  .group:hover .item-gradient {
+    --tw-gradient-from: #f9fafb2a;
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--tw-gradient-to, rgb(249 250 251 / 0));
+    --tw-gradient-to: #f85e5e54;
+    opacity: 0.7;
+  }
+}
