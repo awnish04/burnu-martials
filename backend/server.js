@@ -27,6 +27,9 @@ app.post("/login", (req, res) => {
     }
   });
 });
+app.get("/", (req, res) => {
+  res.send("Server Running");
+});
 app.listen(3001, () => {
-  console.log("Server is running");
+  console.log("Server running on http://localhost:3001");
 });
