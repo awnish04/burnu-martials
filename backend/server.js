@@ -4,8 +4,17 @@ const cors = require("cors");
 const EmployeeModel = require("./models/Employee");
 const app = express();
 app.use(express.json());
-app.use(cors());
-mongoose.connect("mongodb://127.0.0.1:27017/employee");
+app.use(
+  cors({
+    origin: ["https://deploy-mern-frontend.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
+mongoose.connect("mongodb+srv://BurnuMartial:burnu123@reactproject.o0b1sik.mongodb.net/burnumartial?retryWrites=true&w=majority");
+app.get("/", (req, res) => {
+  res.json("Hello");
+})
 // for register with mongoose
 app.post("/register", (req, res) => {
   EmployeeModel.create(req.body)
