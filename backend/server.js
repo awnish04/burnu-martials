@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 // for register with mongoose
 app.post("/register", (req, res) => {
   RegisterModel.create(req.body)
-    .then((userss) => res.json(userss))
+    .then((employees) => res.json(employees))
     .catch((err) => res.json(err));
 });
 // for login with mongoose
