@@ -84,19 +84,13 @@ function Login() {
                 </div>
 
                 <div className="py-2">
-                  <button
-                    type="submit"
-                    className="submit-btn"
-                  >
+                  <button type="submit" className="submit-btn">
                     LogIn
                   </button>
                 </div>
               </form>
               <div className="sm:w-2/3 w-full p-4 lg:px-0 mx-auto">
-                <Link
-                  to="/register"
-                  className="submit-btn"
-                >
+                <Link to="/register" className="submit-btn">
                   Create Account
                 </Link>
               </div>
