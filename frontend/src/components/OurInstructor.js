@@ -7,11 +7,7 @@ import Instructor_2 from "../img/about/instructor-2.jpg";
 import Instructor_3 from "../img/about/instructor-3.jpg";
 import Instructor_4 from "../img/about/instructor-4.jpg";
 import Instructor_5 from "../img/about/instructor-5.jpg";
-// import Link
 import { Link } from "react-router-dom";
-
-
-// import icons
 import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa6";
 
 const OwlCarousel = () => {
@@ -53,7 +49,6 @@ const OwlCarousel = () => {
       <div className="mx-auto py-16 text-center">
             <span className="h1">Our Instructor</span>
           </div>
-      {/* <h1 className="h1 text-center">  </h1> */}
       <Slider {...settings}>
         <div>
           <div className="w-3/4 m-auto">

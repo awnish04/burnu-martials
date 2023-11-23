@@ -1,16 +1,16 @@
 import React from 'react'
-
+import ScrollToTopButton from './ScrollToTop';
 // import link
 import { Link } from "react-router-dom";
 import Socials from './Socials';
 const Footer = () => {
   return (
     <div>
-        <footer class="bg-black">
+        <footer class="bg-black border-t">
     {/* <!-- Contaner --> */}
-    <div class="container mx-w-6xl py-10 mx-auto">
+    <div class="container mx-w-6xl py-8 mx-auto">
       {/* <!-- Footer Flex Container --> */}
-      <div class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start">
+      <div class="flex flex-col items-center space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start">
         {/* <!-- Menu & Logo container --> */}
         <div class="flex flex-col item-center space-y-8 md:items-start md:space-y-4">
           {/* <!-- Logo --> */}
@@ -37,7 +37,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
+        <div className="flex flex-col items-start justify-between space-y-4 text-gray-500">
+          {/* ... your existing footer content ... */}
+          <ScrollToTopButton />
+        </div>
         {/* <!-- Social & Copyright Container --> */}
         <div class="flex flex-col items-start justify-between space-y-4 text-gray-500">
           {/* <!-- Icons Container --> */}

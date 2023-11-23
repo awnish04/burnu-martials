@@ -3,8 +3,6 @@ import Sauna from "../img/services/sauna1.jpg";
 import Shower from "../img/services/shower.jpg";
 import Matted from "../img/services/matted.jpg";
 import Gym from "../img/services/gym1.jpg";
-import { motion } from "framer-motion";
-import { transition1 } from "../transitions";
 import OurProgram from "../components/ourprogram";
 
 const Services = () => {
@@ -13,13 +11,7 @@ const Services = () => {
       <div className="container mx-auto h-full relative">
         <div className="flex flex-col lg:flex-row h-full items-center justify-start gap-x-24 text-center lg:text-left py-10 lg:py-6">
           {/* text */}
-          <motion.div
-            initial={{ opacity: 0, y: "-50%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-50%" }}
-            transition={{ transition: transition1, duration: 1.2 }}
-            className="flex flex-col lg:items-start px-6 lg:p-0 "
-          >
+          <div className="flex flex-col lg:items-start px-6 lg:p-0 ">
             <h1 className="h1">Services</h1>
             <p className="mb-10 max-w-lg text-gray-200 text-justify ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -31,16 +23,9 @@ const Services = () => {
               industry.Lorem Ipsum is simply dummy text of the printing and
               typesetting
             </p>
-          </motion.div>
+          </div>
           {/* image grid */}
-          <motion.div
-            initial={{ opacity: 0, y: "100%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "100%" }}
-            // whileHover={{ scale: 1.1 }}
-            transition={{ transition: transition1, duration: 1.2 }}
-            className="grid grid-cols-2 gap-1 lg:gap-4"
-          >
+          <div className="grid grid-cols-2 gap-1 lg:gap-4">
             {/* image */}
             <div class="grid gap-1 lg:gap-4 h-[300px] lg:h-full bg-no-repeat ">
               <div class="group item rounded-lg">
@@ -83,7 +68,7 @@ const Services = () => {
                 <h5 className="text-xl text-gray-200 text-left">Matted Area</h5>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
         <div className="py-10 lg:py-20">
           <OurProgram />

@@ -35,7 +35,6 @@
     padding-right: 1.5rem;
     transition-duration: 200ms;
   }
-
   .group:hover h5 {
     --tw-scale-x: 1.1;
     --tw-scale-y: 1.1;
@@ -43,7 +42,6 @@
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     --tw-text-opacity: 1;
-    /* color: rgb(0 0 0 / var(--tw-text-opacity)); */
   }
   .item-gradient {
     position: absolute;
@@ -57,7 +55,6 @@
       var(--tw-gradient-to, rgb(0 0 0 / 0));
     --tw-gradient-to: #111827;
   }
-
   .group:hover .item-gradient {
     --tw-gradient-from: #f9fafb2a;
     --tw-gradient-stops: var(--tw-gradient-from),

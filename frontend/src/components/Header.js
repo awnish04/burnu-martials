@@ -1,11 +1,5 @@
 import React from "react";
-
-// import components
-// import Socials from "./Socials";
-// import Logo from "../img/header/logo.svg";
 import MobileNav from "./MobileNav";
-
-// import link
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -47,7 +41,6 @@ const Header = () => {
             Contact
           </Link>
         </nav>
-        
         <nav className="hidden lg:flex gap-4 font-semibold">
         <Link
             to={"/register"}
@@ -61,16 +54,10 @@ const Header = () => {
           >
             SignIn
           </Link>
-        </nav>
-        
+        </nav>      
       </div>
-
-      {/* Socials */}
-      {/* <Socials /> */}
-      {/* Mobile Nav */}
       <MobileNav />
     </header>
   );
 };
-
 export default Header;
