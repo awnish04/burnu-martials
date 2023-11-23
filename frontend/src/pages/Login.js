@@ -19,7 +19,7 @@ function Login() {
       // Clear the password error
       setErrors({ ...errors, email: "", password: "" });
       axios
-        .post("https://burnu-martials.vercel.app/login", {
+        .post("https://burnu-martials.vercel.app", {
           email,
           password,
         })
