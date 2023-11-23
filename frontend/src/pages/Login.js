@@ -40,7 +40,7 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="bg-black">
       <div className="container mx-auto relative">
         <div className="flex flex-col lg:flex-row  h-full py-36 items-center justify-center text-center ">
           <div className="lg:w-3/4 w-full flex mx-auto text-white items-center justify-center text-center lg:px-20 px-0 z-0 bg-gray-900">
@@ -61,7 +61,7 @@ function Login() {
                     id="email"
                     placeholder="Email"
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full p-4 text-lg rounded-sm bg-gray-800 text-md block px-3 py-4 border-2 border-gray-400 placeholder-gray-600 shadow-md focus:placeholder-gray-500  focus:border-gray-600 focus:outline-none"
+                    className="login-input"
                   />
                   {errors.email && (
                     <span className="text-red-600"> {errors.email} </span>
@@ -73,7 +73,7 @@ function Login() {
                     type={password ? "text" : "password"}
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full p-4 text-lg rounded-sm bg-gray-800 text-md block px-3 py-4 border-2 border-gray-400 placeholder-gray-600 shadow-md focus:placeholder-gray-500  focus:border-gray-600 focus:outline-none"
+                    className="login-input"
                   />
                   {errors.password && (
                     <span className="text-red-600"> {errors.password} </span>
@@ -86,7 +86,7 @@ function Login() {
                 <div className="py-2">
                   <button
                     type="submit"
-                    className="uppercase block w-full p-4 text-lg rounded-sm bg-gray-600 hover:bg-gray-700 focus:outline-none"
+                    className="submit-btn"
                   >
                     LogIn
                   </button>
@@ -95,7 +95,7 @@ function Login() {
               <div className="sm:w-2/3 w-full p-4 lg:px-0 mx-auto">
                 <Link
                   to="/register"
-                  className="uppercase block w-full p-4 text-lg rounded-sm bg-gray-500 hover:bg-gray-700 focus:outline-none"
+                  className="submit-btn"
                 >
                   Create Account
                 </Link>

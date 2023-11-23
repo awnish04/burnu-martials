@@ -1,5 +1,5 @@
 import React from "react";
-import MarialArt from "../img/home/marialart.png";
+import MarialArt from "../img/home/marialart.jpg";
 import { Link } from "react-router-dom";
 import Socials from "../components/Socials";
 import Timetable from "../components/Timetable";

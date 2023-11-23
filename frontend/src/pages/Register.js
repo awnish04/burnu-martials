@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Login_Img from "../img/login/login_img.jpg";
+import Login_Img from "../img/register/login_img.jpg";
 import Validation from "../components/RegisterValidation";
 import axios from "axios";
 function Register() {
@@ -34,7 +34,7 @@ function Register() {
     }
   };
   return (
-    <div>
+    <div className="bg-black">
       <div className="container mx-auto  relative">
         {/* text and image wrapper */}
         <div className="flex flex-col lg:flex-row h-full py-16 items-center justify-center text-center ">
@@ -63,7 +63,7 @@ function Register() {
                         name="name"
                         placeholder="User Name"
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full p-4 text-lg rounded-sm bg-gray-800 text-md block px-3 py-4 border-2 border-gray-400 placeholder-gray-600 shadow-md focus:placeholder-gray-500  focus:border-gray-600 focus:outline-none"
+                        className="register-input"
                       />
                       {errors.name && (
                         <span className="text-red-600"> {errors.name} </span>
@@ -75,7 +75,7 @@ function Register() {
                         name="email"
                         placeholder="Email"
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full p-4 text-lg rounded-sm bg-gray-800 text-md block px-3 py-4 border-2 border-gray-400 placeholder-gray-600 shadow-md focus:placeholder-gray-500  focus:border-gray-600 focus:outline-none"
+                        className="register-input"
                       />
                       {errors.email && (
                         <span className="text-red-600"> {errors.email} </span>
@@ -86,7 +86,7 @@ function Register() {
                         type={password ? "text" : "password"}
                         placeholder="Password"
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full p-4 text-lg rounded-sm bg-gray-800 text-md block px-3 py-4 border-2 border-gray-400 placeholder-gray-600 shadow-md focus:placeholder-gray-500  focus:border-gray-600 focus:outline-none"
+                        className="register-input"
                       />
                       {errors.password && (
                         <span className="text-red-600">{errors.password}</span>
@@ -96,7 +96,7 @@ function Register() {
                     <div className="py-2">
                       <button
                         type="submit"
-                        className="uppercase block w-full p-4 text-lg rounded-sm bg-gray-600 hover:bg-gray-700 focus:outline-none"
+                        className="submit-btn"
                       >
                         Register
                       </button>
@@ -108,7 +108,7 @@ function Register() {
                   <div className="sm:w-2/3 w-full p-4 lg:px-0 mx-auto">
                     <Link
                       to="/login"
-                      className="uppercase block w-full  p-4 text-lg rounded-sm bg-gray-600 hover:bg-gray-700 focus:outline-none"
+                      className="submit-btn"
                     >
                       Login
                     </Link>

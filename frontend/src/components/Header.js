@@ -10,51 +10,19 @@ const Header = () => {
         <Link to={"/"} className="max-w-[200px]">
           <h1 className="text-lg lg:text-2xl text-white transition font-primary font-normal capitalize leading-tight tracking-wider ">Burnu Martial's</h1>
         </Link>
-
-        {/* nav-initially hidden -show on desktop mode */}
+        {/* Nav - initially hidden, shown on desktop mode */}
         <nav className="hidden lg:flex gap-x-12 font-semibold">
-          <Link
-            to={"/"}
-            className="font-semibold text-white hover:text-red-700 transition"
-          >
-            Home  
-          </Link>
-
-          <Link
-            to={"/about"}
-            className="font-semibold text-white hover:text-red-700 transition"
-          >
-            About
-          </Link>
-
-          <Link
-            to={"/services"}
-            className="font-semibold text-white hover:text-red-700 transition"
-          >
-            Services
-          </Link>
-
-          <Link
-            to={"/contact"}
-            className="font-semibold text-white hover:text-red-700 transition"
-          >
-            Contact
-          </Link>
+          {['/', '/about', '/services', '/contact'].map((path) => (
+            <Link key={path} to={path} className="font-semibold text-white hover:text-red-700 transition">
+              {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+            </Link>
+          ))}
         </nav>
-        <nav className="hidden lg:flex gap-4 font-semibold">
-        <Link
-            to={"/register"}
-            className="font-semibold loginbtn"
-          >
-            SignUp
-          </Link>
-        <Link
-            to={"/login"}
-            className="font-semibold loginbtn"
-          >
-            SignIn
-          </Link>
-        </nav>      
+        {/* Login/Signup links - initially hidden, shown on desktop mode */}
+        <nav className="hidden lg:flex gap-4 ">
+          <Link to="/register" className="loginbtn">SignUp</Link>
+          <Link to="/login" className="loginbtn">SignIn</Link>
+        </nav>  
       </div>
       <MobileNav />
     </header>

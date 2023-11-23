@@ -20,12 +20,24 @@
   .btn {
     @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-gray-800 text-white;
   }
+  .submit-btn{
+    @apply uppercase block w-full p-4 text-lg rounded-sm bg-gray-600 hover:bg-gray-700 focus:outline-none;
+  }
   .loginbtn {
     @apply py-2 px-4  flex items-center justify-center text-base capitalize rounded-md font-secondary font-semibold bg-gray-800 text-white;
   }
   .item {
     position: relative;
     overflow: hidden;
+  }
+  .register-input{
+    @apply w-full p-4 text-lg rounded-sm bg-gray-800 block px-3 py-4 border-2 border-gray-400 placeholder-gray-600 shadow-md focus:placeholder-gray-500  focus:border-gray-600 focus:outline-none;
+  }
+  .login-input{
+    @apply w-full p-4 text-lg rounded-sm bg-gray-800 block px-3 py-4 border-2 border-gray-400 placeholder-gray-600 shadow-md focus:placeholder-gray-500  focus:border-gray-600 focus:outline-none;
+  }
+  .contact-input{
+    @apply outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-gray-500 text-red-600;
   }
   h5 {
     position: absolute;

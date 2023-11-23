@@ -14,18 +14,18 @@ const Contact = () => {
             <form className="flex flex-col gap-y-4">
               <div className="flex gap-x-10">
                 <input
-                  className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-gray-80 text-red-600 "
+                  className="contact-input "
                   type="text"
                   placeholder="Your Name"
                 />
                 <input
-                  className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-gray-80 text-red-600 "
+                  className="contact-input "
                   type="text"
                   placeholder="Your Email"
                 />
               </div>
               <input
-                className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-gray-80 text-red-600 "
+                className="contact-input "
                 type="text"
                 placeholder="Your Message"
               />

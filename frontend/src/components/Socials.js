@@ -6,35 +6,26 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa6";
+
 const Socials = () => {
+  const socialMediaLinks = [
+    { href: "https://www.facebook.com/", icon: <FaFacebookF /> },
+    { href: "https://www.twitter.com/", icon: <FaTwitter /> },
+    { href: "https://www.pinterest.com/", icon: <FaPinterestP /> },
+    { href: "https://www.instagram.com/", icon: <FaInstagram /> },
+    { href: "https://www.youtube.com/", icon: <FaYoutube /> },
+  ];
+
   return (
     <div className="lg:flex">
       <ul className="text-white flex gap-x-4">
-        <li>
-          <a href="https://www.facebook.com/" targer="_blank">
-            <FaFacebookF/>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com/" targer="_blank">
-            <FaTwitter/>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.pinterest.com/" targer="_blank">
-            <FaPinterestP/>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/" targer="_blank">
-            <FaInstagram/>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/" targer="_blank">
-            <FaYoutube/>
-          </a>
-        </li>
+        {socialMediaLinks.map((item, index) => (
+          <li key={index}>
+            <a href={item.href} target="_blank" rel="noopener noreferrer">
+              {item.icon}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
