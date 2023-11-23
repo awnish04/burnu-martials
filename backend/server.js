@@ -12,6 +12,7 @@ app.use(
   })
 );
 mongoose.connect("mongodb+srv://BurnuMartial:burnu123@reactproject.o0b1sik.mongodb.net/burnumartial?retryWrites=true&w=majority");
+
 app.get("/", (req, res) => {
   res.json("Hello");
 })
