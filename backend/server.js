@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const RegisterModel = require("./models/Register");
-const LoginModel = require("./models/Login");
 const app = express();
 app.use(express.json());
 app.use(
