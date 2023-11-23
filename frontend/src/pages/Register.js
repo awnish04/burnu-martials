@@ -7,8 +7,7 @@ function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  axios.defaults.withCredentials = true;
-  
+ 
   const navigate = useNavigate();
   const [errors, setErrors] = useState({}); // State to manage validation errors
   const handleSubmit = (e) => {
