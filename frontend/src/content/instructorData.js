@@ -63,5 +63,4 @@ const instructors = [
     ],
   },
 ];
-
 export default instructors;
