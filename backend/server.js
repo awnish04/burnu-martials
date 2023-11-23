@@ -1,7 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const EmployeeModel = require("./models/Register");
+const RegisterModel = require("./models/Register");
+const LoginModel = require("./models/Login");
 const app = express();
 app.use(express.json());
 app.use(
@@ -18,14 +19,14 @@ app.get("/", (req, res) => {
 })
 // for register with mongoose
 app.post("/register", (req, res) => {
-  EmployeeModel.create(req.body)
-    .then((employees) => res.json(employees))
+  RegisterModel.create(req.body)
+    .then((userss) => res.json(userss))
     .catch((err) => res.json(err));
 });
 // for login with mongoose
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
-  EmployeeModel.findOne({ email: email }).then((user) => {
+  LoginModel.findOne({ email: email }).then((user) => {
     if (user) {
       if (user.password === password) {
         res.json("Login Successfull.");
