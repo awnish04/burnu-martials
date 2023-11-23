@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import priceData from "../content/ObjectData"
-import fitnessData from "../content/ObjectData"
+import priceData from "../content/PricingData"
+import fitnessData from "../content/PricingData"
 
 const PriceCard = ({ title, price, details, links }) => (
   <div className="flex w-full mb-8 p-2 md:w-1/2 lg:w-1/3 lg:mb-0">
