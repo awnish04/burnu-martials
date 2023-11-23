@@ -7,7 +7,8 @@ function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // };
+  axios.defaults.withCredentials = true;
+  
   const navigate = useNavigate();
   const [errors, setErrors] = useState({}); // State to manage validation errors
   const handleSubmit = (e) => {
@@ -20,7 +21,7 @@ function Register() {
     } else {
       // If there are no validation errors, proceed with the API call
       axios
-        .post("http://localhost:3001/register", {
+        .post("https://burnu-martials.vercel.app/register", {
           name,
           email,
           password,
