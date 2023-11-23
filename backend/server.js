@@ -25,7 +25,7 @@ app.post("/register", (req, res) => {
 // for login with mongoose
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
-  LoginModel.findOne({ email: email }).then((user) => {
+  RegisterModel.findOne({ email: email }).then((user) => {
     if (user) {
       if (user.password === password) {
         res.json("Login Successfull.");
